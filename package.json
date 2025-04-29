@@ -1,13 +1,16 @@
 {
   "dependencies": {
     "express": "^5.1.0",
-    "nodemon": "^3.1.10"
+    "install": "^0.13.0",
+    "mongodb": "^6.16.0",
+    "mongoose": "^8.14.0",
+    "nodemon": "^3.1.10",
+    "npm": "^11.3.0"
   },
   "name": "practice1",
   "version": "1.0.0",
   "type": "module",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js",
