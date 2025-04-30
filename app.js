@@ -12,7 +12,7 @@ app.use('/api/users', userRoutes)
 
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://nachttv22:nachttv22@cluster0.eupf1ds.mongodb.net/yourDatabaseName?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://nachttv22:nachttv22@ecash.5u01dff.mongodb.net/ECASH?retryWrites=true&w=majority&appName=ecash', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
