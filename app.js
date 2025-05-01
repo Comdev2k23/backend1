@@ -7,6 +7,10 @@ const app = express()
 //Middleware to parse json
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send('Welcome to the ECASH API!')
+})
+
 //Routes
 app.use('/api/users', userRoutes)
 
