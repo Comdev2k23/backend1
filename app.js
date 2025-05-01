@@ -4,30 +4,22 @@ import mongoose from 'mongoose'
 
 const app = express()
 
-//Middleware to parse json
+// Middleware to parse JSON
 app.use(express.json())
 
+// Routes
 app.get('/', (req, res) => {
     res.send('Welcome to the ECASH API!')
 })
-
-//Routes
 app.use('/api/users', userRoutes)
-
 
 // MongoDB connection
 mongoose.connect('mongodb+srv://nachttv22:nachttv22@ecash.5u01dff.mongodb.net/ECASH?retryWrites=true&w=majority&appName=ecash', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
-.then(() => {
-    console.log('Connected to MongoDB Atlas ✅')
-})
-.catch((error) => {
-    console.error('Error connecting to MongoDB Atlas ❌', error)
-})
+.then(() => console.log('Connected to MongoDB Atlas ✅'))
+.catch((error) => console.error('MongoDB connection error ❌', error))
 
-//Start server
-
-const PORT = 3000
-app.listen(PORT, () => console.log(`Server running on port http://localhost:${PORT}`))
+// ✅ Export app for Vercel
+export default app
